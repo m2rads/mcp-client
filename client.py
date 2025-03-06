@@ -126,8 +126,33 @@ async def connect_to_server(self, server_Script_path: str):
         return "".join(final_text)        
     
 
+# Interactive Chat Interface 
+
+async def chat_loop(self): 
+    """ Run an Interactive Chat Loop """
+    print("\nHCP Client Started!")
+    print("Type your queries pr 'quit' to exit")
+
+    while True: 
+        try: 
+            query = input("\nQuery: ").strip() 
+
+            if query.lower() == "quit": 
+                print("Exiting...")
+                break 
+
+            response = await self.process_query(query)
+            print("\nResponse:", response)
+            
+        except Exception as e: 
+            print(f"An error occurred: {e}")
+
+async def cleanup(self): 
+    """ Clean up resources """
+    await self.exit_stack.aclose()
 
 
+## Main Entry point
 
 
 

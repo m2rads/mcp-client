@@ -1,0 +1,21 @@
+{
+    "type": "module",
+    "name": "@modelcontextprotocol/server-weather",
+    "bin": {
+        "weather": "./build/index.js"
+    },
+    "scripts": {
+        "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\""
+    },
+    "files": [
+        "build"
+    ],
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.6.1"
+    },
+    "devDependencies": {
+        "@types/node": "^22.13.9",
+        "typescript": "^5.8.2",
+        "zod": "^3.24.2"
+    }
+}

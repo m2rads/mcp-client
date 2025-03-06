@@ -22,7 +22,7 @@ class MCPClient:
 
     # server connection management 
     async def connect_to_server(self, server_Script_path: str):
-        """ connect to a minecraft server using MCP 
+        """ connect to a MCP server
 
             Args: 
             server_Script_path: Path to the server script (.py or .js)
